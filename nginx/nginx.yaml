@@ -10,7 +10,7 @@ metadata:
   name: nginx-deployment
   namespace: git-sub-ns
   labels:
-    name: git-sub-app
+    app: git-sub-app
 spec:
   replicas: 1
   selector:
