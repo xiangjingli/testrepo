@@ -11,6 +11,7 @@ metadata:
   namespace: git-sub-ns
   labels:
     app: acmapp
+    app.kubernetes.io/part-of: git-sub-app
 spec:
   replicas: 1
   selector:
@@ -36,6 +37,7 @@ metadata:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
   labels:
     app: acmapp
+    app.kubernetes.io/part-of: git-sub-app
 spec:
   externalTrafficPolicy: Local
   ports:

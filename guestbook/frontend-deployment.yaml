@@ -5,6 +5,7 @@ metadata:
   namespace: guestbook
   labels:
     app: acmapp
+    app.kubernetes.io/part-of: git-sub-app
 spec:
   selector:
     matchLabels:
