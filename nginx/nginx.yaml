@@ -43,14 +43,17 @@ spec:
     app: nginx
   type: LoadBalancer
 ---
-apiVersion: v1
 kind: Route
+apiVersion: v1
 metadata:
   name: frontend
   namespace: git-sub-ns
 spec:
   host: www.example.com
-  path: "/test" 
+  path: /
   to:
     kind: Service
     name: nginx
+  port:
+    targetPort: http
+  wildcardPolicy: None
