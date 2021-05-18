@@ -4,7 +4,7 @@ metadata:
   name: frontend
   #  namespace: guestbook
   labels:
-    app: guestbook
+    app: acmapp
     tier: frontend
 spec:
   # comment or delete the following line if you want to use a LoadBalancer

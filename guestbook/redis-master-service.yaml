@@ -4,7 +4,7 @@ metadata:
   name: redis-master
   #  namespace: guestbook
   labels:
-    app: redis
+    app: acmapp
     tier: backend
     role: master
 spec:
