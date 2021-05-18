@@ -47,6 +47,7 @@ apiVersion: v1
 kind: Route
 metadata:
   name: frontend
+  namespace: git-sub-ns
 spec:
   host: www.example.com
   path: "/test" 
