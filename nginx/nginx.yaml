@@ -9,8 +9,8 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: git-sub-ns
-    labels:
-      app: pw-nginx
+  labels:
+    app: pw-nginx
 spec:
   replicas: 1
   selector:
