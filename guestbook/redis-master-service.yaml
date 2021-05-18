@@ -8,6 +8,7 @@ metadata:
     tier: backend
     role: master
     app.kubernetes.io/part-of: git-sub-app
+    app.kubernetes.io/part-of: redis
 spec:
   ports:
   - port: 6379

@@ -6,6 +6,7 @@ metadata:
   labels:
     app: acmapp
     app.kubernetes.io/part-of: git-sub-app
+    app.kubernetes.io/part-of: redis
 spec:
   selector:
     matchLabels:
