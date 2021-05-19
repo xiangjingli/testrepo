@@ -4,9 +4,8 @@ metadata:
   name: frontend
   #  namespace: guestbook
   labels:
-    app: acmapp
+    app: redis
     tier: frontend
-    app.kubernetes.io/part-of: git-sub-app
 spec:
   # comment or delete the following line if you want to use a LoadBalancer
   type: NodePort

@@ -4,8 +4,7 @@ metadata:
   name: frontend
   namespace: guestbook
   labels:
-    app: acmapp
-    app.kubernetes.io/part-of: git-sub-app
+    app: redis
 spec:
   selector:
     matchLabels:

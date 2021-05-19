@@ -10,8 +10,7 @@ metadata:
   name: nginx-deployment
   namespace: git-sub-ns
   labels:
-    app: acmapp
-    app.kubernetes.io/part-of: git-sub-app
+    app: nginx
 spec:
   replicas: 1
   selector:
@@ -36,8 +35,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
   labels:
-    app: acmapp
-    app.kubernetes.io/part-of: git-sub-app
+    app: nginx
 spec:
   externalTrafficPolicy: Local
   ports:

@@ -4,9 +4,7 @@ metadata:
   name: redis-master
   namespace: guestbook
   labels:
-    app: acmapp
-    app.kubernetes.io/part-of: git-sub-app
-    app.kubernetes.io/part-of: redis
+    app: redis
 spec:
   selector:
     matchLabels:
