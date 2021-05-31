@@ -7,22 +7,22 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-dpm
   namespace: playback-ns
   labels:
-    app: nginx
+    app: nginx-dpm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-dpm
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-dpm
     spec:
       containers:
-      - name: nginx
+      - name: nginx-dpm
         image: nginx:1.14.2
         ports:
         - containerPort: 80
@@ -30,12 +30,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-dpm
   namespace: playback-ns
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
   labels:
-    app: nginx
+    app: nginx-dpm
 spec:
   externalTrafficPolicy: Local
   ports:
@@ -44,7 +44,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: nginx
+    app: nginx-dpm
   type: LoadBalancer
 ---
 kind: Route
@@ -59,6 +59,6 @@ spec:
   path: /
   to:
     kind: Service
-    name: nginx
+    name: nginx-dpm
   port:
     targetPort: http
