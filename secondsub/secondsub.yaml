@@ -28,7 +28,9 @@ metadata:
 spec:
   channel: ch-git/mychannel
   placement:
-    local: true
+    placementRef:
+      name: dev-cluster
+      kind: PlacementRule
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
