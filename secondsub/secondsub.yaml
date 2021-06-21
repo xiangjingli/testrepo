@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ch-git
+  name: ch-git3
 ---
 apiVersion: v1
 kind: Namespace
@@ -12,7 +12,7 @@ metadata:
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: mychannel
+  name: ch3
   namespace: ch-git
 spec:
   type: Git
@@ -26,7 +26,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-path: day2
 spec:
-  channel: ch-git/mychannel
+  channel: ch-git3/ch3
   placement:
     local: true
 ---
