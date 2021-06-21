@@ -13,7 +13,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: ch3
-  namespace: ch-git
+  namespace: ch-git3
 spec:
   type: Git
   pathname: https://github.com/rokej/testrepo.git
