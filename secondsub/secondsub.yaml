@@ -28,12 +28,14 @@ metadata:
 spec:
   channel: ch-git3/ch3
   placement:
-    local: true
+    placementRef: 
+      name: towhichcluster
+      kind: PlacementRule
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: dev-cluster
+  name: towhichcluster
   namespace: git-sub-ns
 spec:
   clusterSelector: {}
