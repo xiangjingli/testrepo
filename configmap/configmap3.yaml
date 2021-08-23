@@ -17,5 +17,5 @@ metadata:
   labels:
     apps.open-cluster-management.io/channel: object-minio
     apps.open-cluster-management.io/channel-type: ObjectBucket
-  name: cfg-from-ch-qa2
+  name: cfg-from-ch-qa3
 
