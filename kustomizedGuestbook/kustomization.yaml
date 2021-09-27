@@ -2,7 +2,7 @@ resources:
 - wordpress
 - mysql
 namePrefix: demo-
-namespace: hello-
+namespace: hello-ns
 patchesStrategicMerge:
 - patch.yaml
 vars:
