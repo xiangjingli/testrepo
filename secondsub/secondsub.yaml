@@ -13,7 +13,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: ch3
-  namespace: ch-git3
+  namespace: parentsub
 spec:
   type: Git
   pathname: https://github.com/rokej/testrepo.git
@@ -26,7 +26,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-path: day2
 spec:
-  channel: ch-git3/ch3
+  channel: parentsub/ch3
   placement:
     placementRef: 
       name: towhichcluster
