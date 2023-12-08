@@ -5,7 +5,7 @@ namePrefix: demo-
 namespace: hello-ns
 patchesStrategicMerge:
 - patch.yaml
-vars:
+vars2:
   - name: WORDPRESS_SERVICE
     objref:
       kind: Service
