@@ -28,7 +28,7 @@ patches:
       value: "namctigtd27d"
     - op: add
       path: /metadata/labels
-      value: 
+      value:
         datacenter: gtdc
         environment: dev
         monitoring_config_enabled: enabled
