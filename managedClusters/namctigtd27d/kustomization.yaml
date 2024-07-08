@@ -28,13 +28,15 @@ patches:
       value: "namctigtd27d"
     - op: add
       path: /metadata/labels
-      value:
+      value: 
         datacenter: gtdc
         environment: dev
         monitoring_config_enabled: enabled
         region: nam
         sector: cti
         vault-csi-provider-enabled: true
+        test1: test1
+
 - target:
     kind: Namespace
   patch: |
