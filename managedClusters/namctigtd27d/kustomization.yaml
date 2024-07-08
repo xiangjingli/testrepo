@@ -36,6 +36,10 @@ patches:
         sector: cti
         vault-csi-provider-enabled: true
         test1: test1
+    - op: add
+      path: /metadata/annotations
+      value: 
+        test1: test1
 
 - target:
     kind: Namespace
