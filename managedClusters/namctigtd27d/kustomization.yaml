@@ -35,7 +35,6 @@ patches:
         region: nam
         sector: cti
         vault-csi-provider-enabled: true
-
 - target:
     kind: Namespace
   patch: |
