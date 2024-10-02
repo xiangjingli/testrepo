@@ -3,4 +3,3 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: cluster1
-  labels:

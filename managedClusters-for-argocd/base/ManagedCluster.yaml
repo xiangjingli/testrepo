@@ -4,6 +4,5 @@ kind: ManagedCluster
 metadata:
   name: cluster1
   namespace: cluster1
-  labels:
 spec:
   hubAcceptsClient: true
