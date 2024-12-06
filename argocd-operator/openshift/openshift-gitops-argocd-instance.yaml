@@ -14,7 +14,7 @@ spec:
   sourceRepos:
   - '*'
   sourceNamespaces:
-  - '*'
+  - '*'  
 ---
 apiVersion: argoproj.io/v1beta1
 kind: ArgoCD
