@@ -47502,8 +47502,6 @@ spec:
     spec:
       containers:
       - args:
-        - --health-probe-bind-address=:8081
-        - --metrics-bind-address=127.0.0.1:8080
         - --leader-elect
         command:
         - /usr/local/bin/manager
@@ -47516,22 +47514,22 @@ spec:
           value: '*'
         image: registry.redhat.io/openshift-gitops-1/gitops-rhel8-operator@sha256:73f13a5587bbfbea5a64bd3507120eb83b6be85088139c6d65a9aa9cd56e186a
         livenessProbe:
-          exec:
-            command:
-            - ls
+          httpGet:
+            path: /healthz
+            port: 8081
           initialDelaySeconds: 15
-          periodSeconds: 15
-        readinessProbe:
-          exec:
-            command:
-            - ls
-          initialDelaySeconds: 15
-          periodSeconds: 15
+          periodSeconds: 20
         name: manager
         ports:
         - containerPort: 9443
           name: webhook-server
           protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8081
+          initialDelaySeconds: 5
+          periodSeconds: 10
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
