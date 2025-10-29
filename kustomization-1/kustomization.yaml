@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: app-ns-1
+
+resources:
+  - deployment.yaml
+  - pvc.yaml
+  - service.yaml
+
+images:
+  - name: darkhttpd:latest
+    newName: alpinelinux/darkhttpd
+    newTag: latest-x86_64
